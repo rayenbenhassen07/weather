@@ -31,7 +31,14 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
       </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center italic font-bold">
-        <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
+        <div
+          className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl"
+          style={{
+            backgroundImage: 'url("/bg/wind.gif")',
+            backgroundSize: "cover", // To cover the entire div area
+            backgroundPosition: "center", // Position the image in the center
+          }}
+        >
           <div className="text-2xl">
             <h3>Wind Speed</h3>
             <h3
@@ -42,6 +49,7 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
             </h3>
           </div>
         </div>
+
         <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
           <div className="text-2xl">
             <h3>Humidity</h3>
@@ -53,7 +61,14 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
             </h3>
           </div>
         </div>
-        <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
+        <div
+          className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl"
+          style={{
+            backgroundImage: 'url("/bg/direction.svg")',
+            backgroundSize: "cover", // To cover the entire div area
+            backgroundPosition: "center", // Position the image in the center
+          }}
+        >
           <div className="text-2xl">
             <h3>Wind Direction</h3>
             <h3
@@ -86,7 +101,14 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
             </h3>
           </div>
         </div>
-        <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
+        <div
+          className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl"
+          style={{
+            backgroundImage: 'url("/bg/air.svg")',
+            backgroundSize: "cover", // To cover the entire div area
+            backgroundPosition: "center", // Position the image in the center
+          }}
+        >
           <div className="text-2xl">
             <h3>Air Pressure</h3>
             <h3
@@ -108,7 +130,14 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
             </h3>
           </div>
         </div>
-        <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
+        <div
+          className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl"
+          style={{
+            backgroundImage: 'url("/bg/visi.svg")',
+            backgroundSize: "cover", // To cover the entire div area
+            backgroundPosition: "center", // Position the image in the center
+          }}
+        >
           <div className="text-2xl">
             <h3>Visibility</h3>
             <h3
