@@ -4,6 +4,7 @@ import Current from "./components/Current";
 import Input from "./components/Input";
 import WeekForecast from "./components/WeekForecast";
 import WeatherDetails from "./components/WeatherDetails";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [data, setData] = useState({});
@@ -51,11 +52,13 @@ export default function Home() {
   } else {
     content = (
       <>
-        <div className="flex md:flex-row flex-col p-12 items-center justify-between mt-[-4rem] gap-10">
+        <div className="flex md:flex-row flex-col px-10 py-10 items-center justify-between mt-0 ">
           <Current data={data} />
-          <WeekForecast data={data} />
+          <div className="z-10">
+            <WeekForecast data={data} />
+          </div>
         </div>
-        <div>
+        <div className="z-10">
           <WeatherDetails data={data} />
         </div>
       </>
@@ -63,16 +66,18 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-cover bg-gradient-to-r from-blue-500 to-blue-300 h-fit">
-      <div className="bg-white/25 w-full rounded-lg flex flex-col h-fit">
-        <div className="flex flex-col md:flex-row justify-between items-center p-12">
+    <div className="bg-cover bg-gradient-to-r from-blue-900 to-blue-800 h-fit">
+      <div className="bg-white/25 w-full rounded-lg flex flex-col h-fit px-10 pt-8 ">
+        <div className="flex flex-col md:flex-row justify-between items-center z-10 bg-blue-50/70 py-1 px-2 rounded-lg ">
           <Input handleSearch={handleSearch} setLocation={setLocation} />
-          <h1 className="mb-8 md:mb-0 order-1 text-white text-2xl py-2 px-4 rounded-xl italic font-bold">
+          <h1 className="mb-8 md:mb-0 order-1 text-blue-600 text-2xl py-2 px-4 rounded-xl italic font-bold ">
             Weather App.
           </h1>
         </div>
         {content}
       </div>
+
+      <Footer />
     </div>
   );
 }
