@@ -53,7 +53,7 @@ const WeatherCard: React.FC<WeatherCardProps> = ({
       {/* Dynamically update the icon based on the generalCondition */}
       <img
         className="w-[50px] object-cover"
-        src={`/icon/${generalCondition}.svg`} // Load the icon dynamically based on the condition
+        src={`/icon/cloudy.svg`} // Load the icon dynamically based on the condition
         alt={`${generalCondition} Icon`}
       />
 
